@@ -41,7 +41,7 @@ function CharacterDetails() {
                     <div>
                         <h1 className=" font-bold text-2xl">{datos.displayName}</h1>
                         <p className="w-3/4 mx-auto mb-3" >{datos.description}</p>
-                        <h3 className=" font-bold text-xl">Su rol es {datos.role.displayName}</h3>
+                        <h3 className=" font-bold text-xl">Su rol es {datos.role?.displayName}</h3>
                     </div>
                 </div>
 
