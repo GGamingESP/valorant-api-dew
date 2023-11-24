@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx'
 import Maps from './Maps.jsx';
 import './index.css'
+import CharacterDetails from './CharacterDetails.jsx';
+import MapDetails from './MapDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/:uuid",
-    element: <div>Hola</div>,
+    element: <CharacterDetails />,
   },
   {
     path: "/maps",
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/maps/:uuid",
-    element: <div>Hola 2</div>,
+    element: <MapDetails/>,
   },
 ]);
 

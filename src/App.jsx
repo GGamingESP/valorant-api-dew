@@ -17,13 +17,19 @@ function App() {
     datosFetch();
   },[]);
   console.log(datos)
+  let personajes = datos.map((e) => (
+    <CharacterCard
+      key={e.uuid} // Agrega un key único para cada iteración
+      name={e.displayName}
+      uuid={e.uuid}
+      img={e.fullPortrait}
+    />
+  ))
   return (
     <div>
       <AppNavbar />
-      <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 grid grid-cols-4 grid-rows-1">
-        {datos.map((e) =>{
-          <CharacterCard name={e.displayName} uuid={e.uuid} img={e.fullPortrait} />
-        })}
+      <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 grid grid-cols-4 grid-rows-1 justify-center mb-4">
+        {personajes}
       </div>
     </div>
   )
