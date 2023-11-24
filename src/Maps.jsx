@@ -1,6 +1,7 @@
 import AppNavbar from "./AppNavbar"
 import { useState, useEffect } from "react";
 import MapCard from "./MapCard";
+import AppFooter from "./AppFooter";
 
 function Maps() {
 
@@ -32,6 +33,7 @@ function Maps() {
             <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 grid grid-cols-4 grid-rows-1 gap-2 justify-center mb-4">
                 {mapas}
             </div>
+            <AppFooter/>
         </div>
     )
 }

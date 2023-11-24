@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import MapDetailsCallouts from "./MapDetailsCallouts"
 import AppNavbar from "./AppNavbar";
+import AppFooter from "./AppFooter";
 
 function MapDetails() {
     const uuid = useParams()
@@ -34,7 +35,7 @@ function MapDetails() {
     return (
         <div>
             <AppNavbar />
-            <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 flex flex-col text-slate-900">
+            <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 flex flex-col text-slate-900 mb-2">
                 <div className="flex flex-col text-center justify-center">
                     <img src={datos.splash} alt={datos.displayName} className="w-2/4 mx-auto rounded-lg" />
                     <h1 className=" font-bold text-2xl">{datos.displayName}</h1>
@@ -44,6 +45,7 @@ function MapDetails() {
                     {callout}
                 </div>
             </div>
+            <AppFooter/>
         </div>
     )
 }

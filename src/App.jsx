@@ -1,7 +1,7 @@
 import AppNavbar from "./AppNavbar"
 import { useEffect, useState } from "react"
 import CharacterCard from "./CharacterCard";
-
+import AppFooter from "./AppFooter";
 function App() {
 
   const [datos, setDatos] = useState([])
@@ -31,6 +31,7 @@ function App() {
       <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 grid grid-cols-4 grid-rows-1 justify-center mb-4">
         {personajes}
       </div>
+      <AppFooter/>
     </div>
   )
 }

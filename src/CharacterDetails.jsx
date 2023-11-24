@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AppNavbar from "./AppNavbar";
 import CharacterDetailsAbilities from "./CharacterDetailsAbilities";
+import AppFooter from "./AppFooter";
 
 function CharacterDetails() {
     const uuid = useParams()
@@ -35,7 +36,7 @@ function CharacterDetails() {
     return (
         <div>
             <AppNavbar />
-            <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 flex flex-col text-slate-900">
+            <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 flex flex-col text-slate-900 mb-2">
                 <div className="flex flex-col text-center justify-center">
                     <img src={datos.fullPortrait} alt={datos.displayName} className="w-2/4 mx-auto" />
                     <div>
@@ -49,6 +50,7 @@ function CharacterDetails() {
                     {abilities}
                 </div>
             </div>
+            <AppFooter/>
         </div>
     )
 }
