@@ -29,7 +29,7 @@ function CharacterDetails() {
     if (datos && datos.abilities) { // Verifica si datos y datos.abilities están definidos
         console.log(datos)
         abilities = datos.abilities.map((e) => (
-            <CharacterDetailsAbilities name={e.displayName} img={e.displayIcon} key={e.slot}/>
+            <CharacterDetailsAbilities name={e.displayName} img={e.displayIcon} description={e.description} key={e.slot}/>
         ));
     }
 
