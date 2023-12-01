@@ -28,6 +28,7 @@ function App() {
   return (
     <div>
       <AppNavbar />
+      <h2 className="text-center text-white font-bold mt-2 text-xl">Personajes</h2>
       <div className="bg-slate-500 w-11/12 mx-auto mt-4 rounded-xl p-2 grid grid-cols-4 grid-rows-1 justify-center mb-4">
         {personajes}
       </div>
